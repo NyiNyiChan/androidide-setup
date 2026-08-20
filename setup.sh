@@ -1,7 +1,9 @@
 #!/data/data/com.itsaky.androidide/files/usr/bin/bash
 
 echo "AndroidIDE Repository ကို ပြင်ဆင်နေပါသည်..."
-LIST_PATH="$PREFIX/etc/apt/sources.list"
+
+# လမ်းကြောင်းကို အတိအကျ (Full Path) ဖြင့် ထည့်သွင်းခြင်း
+LIST_PATH="/data/data/com.itsaky.androidide/files/usr/etc/apt/sources.list"
 
 # လုံခြုံရေး Error ကို ကျော်ဖြတ်ရန် လင့်ခ်အသစ်ထည့်ခြင်း
 echo "deb [trusted=yes] https://packages.androidide.com/apt/termux-main/ stable main" > "$LIST_PATH"
@@ -11,4 +13,3 @@ echo "Package များကို Update လုပ်ပြီး Setup စတ
 apt update && idesetup
 
 echo "✅ လုပ်ငန်းစဉ် အားလုံး ပြီးဆုံးသွားပါပြီ!"
-
